@@ -1,0 +1,1096 @@
+/* ========================================
+   CLUB DETAIL PAGE - GLOBAL & LAYOUT
+   ======================================== */
+
+.club-detail-page {
+  min-height: 100vh;
+  background: #141414;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Загрузка и ошибки */
+.club-loading-container,
+.club-error-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #ff781d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.club-error-container h2 {
+  color: #ff4d4f;
+  margin-bottom: 1rem;
+}
+
+.btn-back {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-back:hover {
+  background: #444;
+}
+
+/* ========================================
+   COVER SECTION
+   ======================================== */
+
+.club-cover-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.club-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.club-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.club-cover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 2rem 4%;
+}
+
+.club-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.club-franchise {
+  font-size: 1.1rem;
+  color: #f60;
+  margin: 0;
+}
+
+.franchise-link {
+  color: #f60;
+  text-decoration: none;
+}
+
+.franchise-link:hover {
+  text-decoration: underline;
+}
+
+.club-meta-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+.badge-inactive {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+/* ========================================
+   ADMIN PANEL & FORMS
+   ======================================== */
+
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-upload-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Кнопки */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background: #333;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #444;
+}
+
+.btn-primary {
+  background: #ff781d; /* Netflix Red style or Orange #f60 */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-danger {
+  background-color: #ff781d;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+/* Формы загрузки */
+.upload-form-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+}
+
+.cover-upload-card {
+  border-left: 4px solid #ff781d;
+}
+
+.upload-form-card h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.form-group input[type="file"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ========================================
+   MAIN CONTENT LAYOUT
+   ======================================== */
+
+.club-content-wrapper {
+  padding-bottom: 4rem;
+}
+
+.club-grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .club-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-block {
+  margin-bottom: 3rem;
+}
+
+.info-block h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1.5rem;
+  color: #fff;
+  border-left: 4px solid #ff781d;
+  padding-left: 15px;
+}
+
+.section-header-with-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.limit-hint {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Описание и требования */
+.club-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.club-requirements {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f60;
+}
+
+.club-requirements h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.club-requirements p {
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ========================================
+   GALLERY STYLES (UPDATED)
+   ======================================== */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding-top: 10px;
+}
+
+.photo-item {
+  background-color: #252525;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: #444;
+}
+
+.photo-image-wrapper {
+  width: 100%;
+  height: 240px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.photo-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-item:hover .photo-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.photo-caption-wrapper {
+  padding: 12px 16px;
+  background-color: #252525;
+  border-top: 1px solid #333;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.photo-caption {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.empty-state {
+  color: #666;
+  font-style: italic;
+  padding: 40px;
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px dashed #333;
+  margin-top: 10px;
+}
+
+/* ========================================
+   MEMBERS LIST
+   ======================================== */
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border-left: 4px solid #333;
+  transition: background 0.2s;
+}
+
+.member-item:hover {
+  background: #222;
+}
+
+.member-item.role-admin {
+  border-left-color: #f60;
+}
+
+.member-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.member-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-role {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.member-status-indicator {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+/* ========================================
+   ADMIN SETTINGS BLOCK
+   ======================================== */
+
+.admin-settings-block {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-settings-block h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-left: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.setting-item.full-width {
+  grid-column: span 2;
+}
+
+.setting-label {
+  color: #888;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.setting-value {
+  color: #eee;
+  font-weight: 500;
+}
+
+.setting-code {
+  background: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #4caf50;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status-badge.active {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.status-badge.inactive {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.setting-divider {
+  grid-column: span 2;
+  height: 1px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+.file-tag {
+  background: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.questions-list {
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.questions-list li {
+  margin-bottom: 4px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .club-cover-section {
+    height: 250px;
+  }
+
+  .club-title {
+    font-size: 1.75rem;
+  }
+
+  .admin-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-upload-buttons {
+    flex-direction: column;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-item.full-width {
+    grid-column: span 1;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .photo-image-wrapper {
+    height: 150px;
+  }
+}
+
+/* Сетка галереи */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding-top: 10px;
+}
+
+/* Карточка фотографии - теперь без фиксированного фона */
+.photo-item.full-image-card {
+  position: relative; /* Для позиционирования подписи */
+  background-color: #252525;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+  aspect-ratio: 1 / 1; /* Делает карточку квадратной. Убери, если хочешь произвольную высоту */
+  cursor: pointer;
+}
+
+.photo-item.full-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: #444;
+}
+
+/* Картинка на весь блок */
+.photo-item.full-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполняет всё пространство, обрезая лишнее */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-item.full-image-card:hover img {
+  transform: scale(1.05); /* Легкий зум при наведении */
+}
+
+/* Подпись поверх картинки */
+.photo-overlay-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, transparent 100%);
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: break-word;
+  opacity: 0; /* Скрыта по умолчанию */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Чтобы клик проходил сквозь текст */
+}
+
+/* Показываем подпись при наведении на карточку */
+.photo-item.full-image-card:hover .photo-overlay-caption {
+  opacity: 1;
+}
+
+/* Если хочешь, чтобы подпись была видна ВСЕГДА, удали opacity: 0 и hover-правило выше */
+
+/* ... предыдущие стили ... */
+
+/* Кнопка удаления (обычное состояние) */
+.btn-danger-outline {
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.btn-danger-outline:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #fff;
+  border-color: #dc3545;
+}
+
+/* Кнопка удаления (режим подтверждения) */
+.btn-danger-confirm {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #dc3545;
+  animation: pulse-red 1.5s infinite;
+}
+
+.btn-danger-confirm:hover {
+  background-color: #bb2d3b;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+/* ========================================
+   COVER SECTION
+   ======================================== */
+
+.club-cover-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.club-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.club-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.club-cover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  padding: 2rem 4%;
+}
+
+.club-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.club-franchise {
+  font-size: 1.1rem;
+  color: #f60;
+  margin: 0;
+  
+  /* ✅ Обрезка текста с троеточием */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.franchise-link {
+  color: #f60;
+  text-decoration: none;
+  
+  /* ✅ Ссылка тоже обрезается */
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.franchise-link:hover {
+  text-decoration: underline;
+}
+
+.club-meta-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+.badge-inactive {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* ✅ Увеличенная обложка на мобильных */
+  .club-cover-section {
+    height: 350px; /* Было 250px, стало 350px */
+  }
+
+  .club-title {
+    font-size: 1.75rem;
+  }
+
+  /* ✅ Франшиза на мобильных */
+  .club-franchise {
+    font-size: 1rem;
+  }
+
+  .admin-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-upload-buttons {
+    flex-direction: column;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-item.full-width {
+    grid-column: span 1;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .photo-image-wrapper {
+    height: 150px;
+  }
+}
+
+/* ✅ Для очень маленьких экранов (320-375px) */
+@media (max-width: 375px) {
+  .club-cover-section {
+    height: 300px; /* Чуть меньше на совсем маленьких экранах */
+  }
+
+  .club-title {
+    font-size: 1.5rem;
+  }
+
+  .club-franchise {
+    font-size: 0.95rem;
+  }
+
+  .club-cover-overlay {
+    padding: 1.5rem 3%;
+  }
+}
+
+/* ========================================
+   ADMIN PANEL & FORMS
+   ======================================== */
+
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-upload-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* ✅ Админ-панель: кнопки в ряд с переносом */
+  .admin-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .admin-upload-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* ✅ Кнопки не на всю ширину */
+  .admin-upload-buttons .btn {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  /* Первая кнопка (Редактировать) тоже не на всю ширину */
+  .admin-panel > .btn-secondary {
+    width: auto;
+    align-self: center;
+  }
+}
+
+/* ========================================
+   CLUB ACTION BUTTONS (Join/Leave)
+   ======================================== */
+
+.club-action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-join {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn-join:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-leave {
+  background: transparent;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-leave:hover {
+  background: rgba(255, 152, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-leave:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .club-action-buttons {
+    justify-content: center;
+  }
+  
+  .btn-join,
+  .btn-leave {
+    flex: 0 0 auto;
+    min-width: 140px;
+  }
+}
+
+/* Кликабельное имя pending-участника */
+.member-name-pending {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #ff781d;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+
+.member-name-pending:hover {
+  color: #f40612;
+  text-decoration: underline;
+}
+
+.member-name-pending:hover .approve-hint {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.member-name-pending:focus-visible {
+  outline: 2px solid #ff781d;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.approve-hint {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s;
+}
+
+.member-item:hover .approve-hint {
+  opacity: 0.7;
+  transform: translateX(0);
+}
+
+/* Бейдж "На проверке" */
+.status-pending-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: rgba(255, 120, 29, 0.15);
+  color: #ff781d;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+/* Подсветка строки pending-участника */
+.member-item:has(.member-name-pending) {
+  background: rgba(255, 120, 29, 0.05);
+  border-left: 3px solid #ff781d;
+}
+
+.member-item:has(.member-name-pending):hover {
+  background: rgba(255, 120, 29, 0.1);
+}

@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 
 // Массив объектов: текст ссылки и маршрут
 const navItems = [
-  { label: 'Для вас', path: '/browse' },
   { label: 'Сериалы', path: '/browse' },
   { label: 'Фильмы', path: '/browse' },
-  { label: 'Детям', path: '/browse' },
+  { label: 'Клубы', path: '/clubs/search' },
 ];
 
 function Header() {

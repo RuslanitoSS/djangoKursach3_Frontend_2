@@ -1,8 +1,12 @@
+import heroBgImage from './hero-bg.png';
+
 function Hero() {
     return (
         <section className="hero">
             <div
-                className="hero-bg"></div>
+                className="hero-bg">
+                <img src={heroBgImage} alt="Hero background" />
+            </div>
             <div className="hero-content">
                 <h1 className="hero-title">
                     Фильмы и сериалы,<br />

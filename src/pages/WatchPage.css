@@ -1,3 +1,297 @@
+/* ================= PRINT STYLES ================= */
+  .print-poster, .print-poster img{
+    display: none !important;
+  }
+@media print {
+  /* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+  
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.5;
+  }
+  
+  /* ===== ЦЕНТРИРУЮЩИЙ КОНТЕЙНЕР ===== */
+  .movie-detail-page {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+  
+  /* ===== СКРЫТЬ НЕ НУЖНЫЕ ЭЛЕМЕНТЫ ===== */
+  .video-player-section,
+  .hero-overlay,
+  .btn-secondary,
+  .btn-outline,
+  .btn-primary,
+  .close-player,
+  .modal-overlay,
+  .play-icon,
+  .playing-badge,
+  .playing-dot,
+  .episode-overlay,
+  .recommendations-section,
+  footer,
+  nav,
+  header,
+  .hero-backdrop {
+    display: none !important;
+  }
+  
+  /* ===== ПОСТЕР ДЛЯ ПЕЧАТИ ===== */
+
+  
+  /* ===== HERO СЕКЦИЯ ===== */
+  .movie-hero {
+    min-height: auto !important;
+    padding: 0 !important;
+    margin-bottom: 25px !important;
+    background: #fff !important;
+    display: block !important;
+    page-break-inside: avoid !important;
+  }
+  
+  .hero-content {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .hero-text {
+    color: #000 !important;
+    padding: 0 !important;
+  }
+  
+  .movie-title {
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin: 0 0 15px 0 !important;
+    padding: 0 0 10px 0 !important;
+    border-bottom: 2px solid #000 !important;
+    line-height: 1.2 !important;
+  }
+  
+  .movie-description {
+    font-size: 11pt !important;
+    color: #000 !important;
+    margin: 15px 0 !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+  }
+  
+  .movie-meta {
+    font-size: 10pt !important;
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    align-items: center !important;
+  }
+  
+  .meta-item {
+    color: #000 !important;
+  }
+  
+  .meta-divider {
+    margin: 0 5px !important;
+    color: #666 !important;
+  }
+  
+  .age-rating {
+    border: 1px solid #000 !important;
+    padding: 2px 6px !important;
+    font-weight: bold !important;
+  }
+  
+  /* ===== РЕЙТИНГ ВЛЕВО ===== */
+  .movie-rating-block {
+    margin: 15px 0 !important;
+    padding: 8px 12px !important;
+    border: 1px solid #ccc !important;
+    display: inline-block !important;
+    float: left !important;
+    margin-right: 20px !important;
+  }
+  
+  .rating-main {
+    display: inline !important;
+    margin: 0 !important;
+  }
+  
+  .rating-value {
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin-right: 5px !important;
+  }
+  
+  .rating-label {
+    font-size: 10pt !important;
+    color: #666 !important;
+    margin: 0 !important;
+  }
+  
+  .rating-votes {
+    font-size: 9pt !important;
+    color: #666 !important;
+    display: block !important;
+    margin-top: 3px !important;
+  }
+  
+  .movie-genres {
+    margin: 15px 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    clear: both !important;
+  }
+  
+  .genre-tag {
+    border: 1px solid #000 !important;
+    padding: 3px 8px !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    font-size: 9pt !important;
+  }
+  
+  /* ===== ЭПИЗОДЫ (если сериал) ===== */
+  .episodes-section {
+    page-break-inside: avoid;
+    margin: 30px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .section-header {
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #000 !important;
+  }
+  
+  .section-title {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin: 0 !important;
+  }
+  
+  .episodes-count {
+    display: none !important;
+  }
+  
+  .chapter-episodes-grid {
+    display: block !important;
+  }
+  
+  .episode-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    border: 1px solid #000 !important;
+    margin-bottom: 15px !important;
+    padding: 10px !important;
+    background: #fff !important;
+  }
+  
+  .episode-thumbnail {
+    display: none !important;
+  }
+  
+  .episode-info {
+    padding: 0 !important;
+  }
+  
+  .episode-title {
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin: 0 0 5px 0 !important;
+  }
+  
+  .episode-description {
+    font-size: 10pt !important;
+    color: #000 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    -webkit-line-clamp: none !important;
+    line-clamp: none !important;
+    overflow: visible !important;
+    text-align: justify !important;
+  }
+  
+  /* ===== PAGE BREAKS ===== */
+  h1, h2, h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  
+  table, img, svg, pre, blockquote {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  ul, ol, dl {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+  
+  /* ===== HEADER/FOOTER СТРАНИЦЫ ===== */
+  @page {
+    @top-center {
+      content: string(title);
+      font-size: 10pt;
+      color: #666;
+    }
+    
+    @bottom-center {
+      content: "Страница " counter(page) " из " counter(pages);
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+  
+  .movie-title {
+    string-set: title content();
+  }
+  
+  /* ===== СКРЫТЬ СКРОЛЛБАРЫ ===== */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ===== СТИЛИ ДЛЯ ПОСТЕРА ПРИ ПЕЧАТИ ===== */
+@media print {
+  .print-poster {
+    display: block !important;
+    float: left !important;
+    width: 120px !important;
+    margin-right: 20px !important;
+    margin-bottom: 15px !important;
+    page-break-inside: avoid !important;
+  }
+  
+  .print-poster img {
+    width: 100% !important;
+    height: auto !important;
+    border: 1px solid #000 !important;
+    display: block !important;
+  }
+}
 /* Страница фильма */
 .movie-detail-page {
   background-color: #0a0a0a;
@@ -58,6 +352,7 @@
   font-weight: 700;
   margin: 0 0 10px 0;
   line-height: 1.1;
+  text-align: left;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -149,7 +444,7 @@
 }
 
 .btn-primary {
-  background-color: #e50914;
+  background-color: #ff781d;
   color: #fff;
   border: none;
   padding: 16px 40px;
@@ -161,7 +456,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #f40612;
+  background-color: #ff6600;
   transform: scale(1.05);
 }
 
@@ -232,7 +527,7 @@
 
 .play-button-large:hover {
   transform: scale(1.1);
-  background-color: #e50914;
+  background-color: #ff781d;
 }
 
 .close-trailer {
@@ -263,16 +558,18 @@
 }
 
 .section-title {
+  text-align: start;
   font-size: 24px;
   font-weight: 600;
   color: #fff;
   margin: 0 0 25px 0;
 }
 
-.episodes-grid {
+.chapter-episodes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
+  padding-top: 60px;
 }
 
 .episode-card {
@@ -294,7 +591,7 @@
 .episode-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   transition: transform 0.3s;
 }
 
@@ -461,3 +758,351 @@
     padding: 30px 20px;
   }
 }
+
+/* ================= ПЛЕЕР: Основная секция ================= */
+.video-player-section {
+  padding: 30px 60px;
+  background: #0a0a0a;
+  border-bottom: 1px solid #222;
+}
+
+.video-player-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок плеера */
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.player-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.player-duration {
+  color: #999;
+  font-size: 14px;
+  background: #1a1a1a;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* Контейнер видео */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.main-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.play-icon-large {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 120, 29, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* Кнопки управления плеером */
+.player-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff781d;
+  color: #ff781d;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: #ff781d;
+  color: #fff;
+}
+
+/* ================= ЭПИЗОДЫ ================= */
+.episodes-section {
+  padding: 30px 60px;
+  background: #0a0a0a;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.episodes-count {
+  color: #999;
+  font-size: 14px;
+}
+
+.chapter-episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.episode-card {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
+}
+
+.episode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 120, 29, 0.3);
+}
+
+.episode-card.active {
+  border-color: #ff781d;
+  box-shadow: 0 0 25px rgba(255, 120, 29, 0.5);
+}
+
+.episode-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.episode-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.episode-card:hover .episode-thumbnail img {
+  transform: scale(1.05);
+}
+
+.episode-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.episode-card:hover .episode-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 120, 29, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.episode-duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.playing-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff781d;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.playing-dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.9); }
+}
+
+.episode-info {
+  padding: 15px;
+}
+
+.episode-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.episode-description {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================= МОДАЛЬНОЕ ОКНО ТРЕЙЛЕРА ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.trailer-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.trailer-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ================= АДАПТИВНОСТЬ ================= */
+@media (max-width: 768px) {
+  .video-player-section,
+  .episodes-section,
+  .movie-info-section {
+    padding: 20px;
+  }
+  
+  .player-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .chapter-episodes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-close {
+    top: -40px;
+  }
+}
+

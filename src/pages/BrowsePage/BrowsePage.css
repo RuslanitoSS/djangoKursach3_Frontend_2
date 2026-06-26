@@ -41,7 +41,7 @@
 }
 
 .search-input:focus {
-  border-color: #e50914;
+  border-color: #ff781d;
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
 }
 
@@ -113,8 +113,8 @@
 
 .filter-btn.active {
   background-color: #2a2a2a;
-  border-color: #e50914;
-  color: #e50914;
+  border-color: #ff781d;
+  color: #ff781d;
 }
 
 .filter-arrow {
@@ -160,7 +160,7 @@
 }
 
 .filter-menu-item.active {
-  background-color: #e50914;
+  background-color: #ff781d;
   color: #fff;
 }
 
@@ -178,8 +178,8 @@
 }
 
 .clear-filters-btn:hover {
-  border-color: #e50914;
-  color: #e50914;
+  border-color: #ff781d;
+  color: #ff781d;
 }
 
 /* Секция контента */
